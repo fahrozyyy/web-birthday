@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Nanaaa😸</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: linear-gradient(270deg, #fbc2eb, #a6c1ee, #fda085, #f6d365);
+      background-size: 600% 600%;
+      animation: gradientBG 12s ease infinite;
+      overflow: hidden;
+      position: relative;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1, h2, p {
+      color: #fff;
+      text-align: center;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      font-family: "Great Vibes", cursive;
+      font-size: 3rem;
+      margin: 15px 0;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 15px 0;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 1000px;   /* teks lebih lebar */
+      margin: 15px auto;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .page img {
+      width: 200px;
+      max-width: 80%;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 15px 35px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+
+    .nextBtn {
+      background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb);
+      color: white;
+      background-size: 200% 200%;
+      animation: gradientMove 4s infinite, pulse 2s infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .nextBtn:hover {
+      filter: brightness(1.15);
+      transform: scale(1.1);
+    }
+
+    #noBtn {
+      background: #ff6b6b;
+      color: white;
+      position: relative;
+    }
+
+    #yesBtn {
+      background: #4ecdc4;
+      color: white;
+    }
+
+    .page {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+      height: 100vh;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.8s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .active {
+      display: flex;
+      opacity: 1;
+      transform: translateX(0);
+      z-index: 10;
+    }
+
+    .exit-left {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+
+    .answer {
+      font-size: 1.7rem;
+      margin-top: 40px;
+      color: #fff;
+      font-weight: bold;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .flower {
+      position: fixed;
+      top: -50px;
+      font-size: 2rem;
+      animation: fall linear forwards;
+      opacity: 0.8;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .heart {
+      position: fixed;
+      bottom: 0;
+      font-size: 2rem;
+      color: pink;
+      animation: floatUp linear forwards;
+    }
+
+    @keyframes floatUp {
+      to {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Halaman 1 -->
+  <div id="page1" class="page active">
+    <img src="page 1.jpeg" alt="GIF lucu pembuka">
+    <h1>Selamat ulang tahun Nanaaa</h1>
+    <p>aku punya sedikit kejutan disini nih klik aja</p>
+    <button class="nextBtn" onclick="nextPage(1,2)">klik aku woiii</button>
+  </div>
+
+  <!-- Halaman 2 -->
+  <div id="page2" class="page">
+    <img src="page 2.jpeg" alt="GIF romantis">
+    <h2>Selamat ulang tahun Nanaaaaa 🌷</h2>
+
+    <p>
+      Selamat ulang tahun untuk seseorang yang begitu berarti dalam hidupku 🌹. Hari ini bukan hanya sekadar hari bertambahnya usiamu, tapi juga pengingat betapa beruntungnya dunia karena kedatanganmu. Aku berdoa semoga semua yang kamu impikan satu per satu bisa tercapai, semoga kebahagiaan selalu ada di setiap langkahmu, dan semoga kamu selalu dikelilingi orang-orang yang tulus menyayangimu. Namun di antara banyak doa itu, ada satu yang paling kuat dariku: semoga aku bisa terus ada di sisimu, melihatmu tumbuh, berkembang, dan tersenyum. Karena bagiku, senyummu adalah hal yang paling berharga yang pernah aku lihat, sesuatu yang bisa menghapus lelahku dalam sekejap. 
+    </p>
+    <p>
+      Aku juga ingin jujur, bahwa di balik ucapanku ini ada perasaan yang tidak selalu bisa aku ungkapkan dengan mudah. Kamu bukan hanya seseorang yang aku kagumi, tapi juga seseorang yang secara perlahan telah mengambil ruang istimewa di hatiku. Aku sering menemukan diriku merindukan percakapan sederhana denganmu, atau merasa bahagia hanya karena tahu kamu baik-baik saja. Jadi, di hari ulang tahunmu ini, aku ingin kamu tahu bahwa kamu itu spesial—lebih dari yang mungkin pernah kamu bayangkan. Semoga kamu bisa merasakan betapa tulusnya perasaan ini, sama tulusnya seperti doaku yang akan selalu menyertaimu.
+    </p>
+
+    <p>Maukah kamu jadi pasangan aku? 💖</p>
+    <button class="nextBtn" onclick="nextPage(2,3)">jawab disini woi</button>
+  </div>
+
+  <!-- Halaman 3 -->
+  <div id="page3" class="page">
+    <img src="catlove.gif" alt="GIF jawaban user">
+    <h2>Jawabbbb woooiiii</h2>
+    <div class="buttons">
+      <button id="noBtn">No</button>
+      <button id="yesBtn">Yes</button>
+    </div>
+    <div class="answer" id="userAnswer"></div>
+  </div>
+
+  <script>
+    function nextPage(from, to) {
+      const current = document.getElementById("page" + from);
+      const next = document.getElementById("page" + to);
+
+      current.classList.remove("active");
+      current.classList.add("exit-left");
+
+      setTimeout(() => {
+        current.classList.remove("exit-left");
+        current.style.display = "none";
+        next.classList.add("active");
+      }, 800);
+    }
+
+    const noBtn = document.getElementById("noBtn");
+    const yesBtn = document.getElementById("yesBtn");
+    const userAnswer = document.getElementById("userAnswer");
+
+    function launchFlowers() {
+      for (let i = 0; i < 15; i++) {
+        const flower = document.createElement("div");
+        flower.classList.add("flower");
+        flower.innerHTML = ["🌸","🌷","🌺","💮","🌻"][Math.floor(Math.random() * 5)];
+        flower.style.left = Math.random() * window.innerWidth + "px";
+        flower.style.fontSize = 20 + Math.random() * 30 + "px";
+        flower.style.animationDuration = 3 + Math.random() * 5 + "s";
+        document.body.appendChild(flower);
+        setTimeout(() => flower.remove(), 7000);
+      }
+    }
+
+    function launchHearts() {
+      for (let i = 0; i < 20; i++) {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "❤️";
+        document.body.appendChild(heart);
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        heart.style.fontSize = 20 + Math.random() * 40 + "px";
+        heart.style.animationDuration = 3 + Math.random() * 3 + "s";
+        setTimeout(() => heart.remove(), 6000);
+      }
+    }
+
+    noBtn.addEventListener("mouseover", () => {
+      const chance = Math.random();
+      if (chance > 0.0001) {
+        const newX = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+        const newY = Math.random() * (window.innerHeight - noBtn.offsetHeight - 50);
+        noBtn.style.position = "absolute";
+        noBtn.style.left = `${newX}px`;
+        noBtn.style.top = `${newY}px`;
+      }
+    });
+
+    noBtn.addEventListener("click", () => {
+      const chance = Math.random();
+      if (chance <= 0.0001) {
+        localStorage.setItem("userResponse", "No 😢");
+        showAnswer();
+        launchFlowers();
+      } else {
+        alert("Hehe... tombol No terlalu licin buat disentuh 😜");
+      }
+    });
+
+    yesBtn.addEventListener("click", () => {
+      localStorage.setItem("userResponse", "Yes 🥰");
+      showAnswer();
+      launchFlowers();
+      launchHearts();
+    });
+
+    function showAnswer() {
+      const answer = localStorage.getItem("userResponse");
+      if (answer) {
+        userAnswer.textContent = "Yeaaaaaaaaayyy kita fix!";
+      }
+    }
+  </script>
+</body>
+</html>
